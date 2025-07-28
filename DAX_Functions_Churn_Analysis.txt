@@ -1,0 +1,50 @@
+
+DAX FUNCTIONS USED IN CUSTOMER CHURN DASHBOARD
+=============================================
+
+1. Churn Rate Calculation
+-------------------------
+Churn Rate (%) = 
+DIVIDE(
+    CALCULATE(COUNTROWS(CustomerData), CustomerData[Churn] = "Yes"),
+    COUNTROWS(CustomerData)
+) * 100
+
+2. Average Customer Tenure
+--------------------------
+Average Tenure = AVERAGE(CustomerData[Tenure])
+
+3. Median Customer Tenure
+-------------------------
+Median Tenure = MEDIAN(CustomerData[Tenure])
+
+4. Tenure Grouping
+------------------
+Tenure Group = 
+SWITCH(
+    TRUE(),
+    CustomerData[Tenure] <= 10, "New",
+    CustomerData[Tenure] <= 30, "Short-Term",
+    CustomerData[Tenure] <= 60, "Long-Term",
+    "Very Long-Term"
+)
+
+5. Churn Rate by Category (e.g., Payment Method)
+------------------------------------------------
+Churn Rate by Payment = 
+DIVIDE(
+    CALCULATE(COUNTROWS(CustomerData), CustomerData[Churn] = "Yes"),
+    CALCULATE(COUNTROWS(CustomerData))
+) * 100
+
+6. Total Churned Customers
+--------------------------
+Total Churned = CALCULATE(COUNTROWS(CustomerData), CustomerData[Churn] = "Yes")
+
+7. Overall Churn Rate (Ignoring Filters)
+----------------------------------------
+Churn Rate Overall = 
+DIVIDE(
+    CALCULATE(COUNTROWS(CustomerData), CustomerData[Churn] = "Yes"),
+    CALCULATE(COUNTROWS(CustomerData), ALL(CustomerData))
+) * 100
