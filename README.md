@@ -77,7 +77,9 @@ To analyze customer churn data, identify high-risk segments, and help businesses
 - Gender and partner status show subtle churn behavior variations.
 
 ---
-
+🙋‍♂️ Author
+Nikhil Ratagal
+Data Analyst | Power BI Enthusiast
 ## 📌 Future Improvements
 
 - Integrate machine learning churn prediction using Python.
