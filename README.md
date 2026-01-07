@@ -84,7 +84,7 @@ To analyze customer churn data, identify high-risk segments, and help businesses
 - Add cohort analysis and revenue impact from churn.
 - Deploy Power BI dashboard to Power BI Service with real-time updates.
 
-- 
+  
 🙋‍♂️ Author
 Nikhil Ratagal
 Data Analyst | Power BI Enthusiast
